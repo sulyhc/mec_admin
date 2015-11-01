@@ -30,5 +30,16 @@ class cEmpleados{
 		$emp = new mEmpleados();
 		return $emp->getEmpleado($clave);
 	}
+	
+	/**
+	 * cambia la contraseña del empleado
+	 *
+	 * @return void
+	 * @author  Walter
+	 */
+	 function cambiaPass($idEmp,$contra){
+	 	$emp = new mEmpleados();
+		$emp->cambiaPass($idEmp,$contra);
+	 }
 }
  ?>

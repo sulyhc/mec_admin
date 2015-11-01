@@ -1,8 +1,13 @@
+<?php
+include_once ("../controller/cEmpleados.php");
+$empl = new cEmpleados();
+$e = $empl -> devuelveEmpleado($_POST['id']);
+?>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Justificar Dia</h4>
+        <h4 class="modal-title" id="myModalLabel">Justificar Dia a: <?php echo $e['nombres']." ".$e['a_pat']." ".$e['a_mat'] ?></h4>
       </div>
       <div class="modal-body">
         <div class="row">
