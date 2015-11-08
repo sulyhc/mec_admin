@@ -374,13 +374,13 @@ function justificaDia(){
 }
 
 function cambiaPass(formu){
-	alert(formu);
 	$.ajax({
 		type:"POST",
 		url:"helper/cambiaContra.php",
 		data:$("#"+formu).serialize(),
 		success:function(data){
 			alert(data);
+			$("#modalCambiaContra").modal("hide");
 		}
 	});
 }
