@@ -70,6 +70,9 @@ class mEmpleados {
 		$con->exec($query);
 	}
 	
+	function editEmpleado($id,$nombre,$a_pat,$a_mat,$fnac,$sexo,$tel,$email,$cel,$puesto){
+		$query = "update personal set nombres = '$nombre',";
+	}
 	
 
 }

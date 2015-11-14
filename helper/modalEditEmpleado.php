@@ -19,6 +19,7 @@ $em = $emple->devuelveEmpleado($_POST['id']);
 		</div>
 		<div class="modal-body">
 			<form id="formEditEmp">
+				<input type="hidden" name="idEmple" value="<?php echo $_POST['id'] ?>" />
 				<div class="row">
 					<div class="form-group">
 						<div class="col-md-4">
@@ -93,7 +94,7 @@ $em = $emple->devuelveEmpleado($_POST['id']);
 			<button type="button" class="btn btn-default" data-dismiss="modal">
 				Cerrar
 			</button>
-			<button type="button" class="btn btn-primary" onclick="guardaCambios()">
+			<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="editaEm()">
 				Guardar Cambios
 			</button>
 		</div>

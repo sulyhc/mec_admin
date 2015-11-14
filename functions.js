@@ -385,3 +385,14 @@ function cambiaPass(formu){
 	});
 }
 
+
+function editaEm(){
+	$.ajax({
+		type:"POST",
+		url:"helper/editEmp.php",
+		data:$("#formEditEmp").serialize(),
+		success:function(data){
+			alert(data);
+		}
+	});
+}
